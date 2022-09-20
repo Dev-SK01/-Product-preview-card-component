@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @media screen and (max-width: 2560px) {
+      body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background-color: #f3eae3;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .col-sm-7{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .img-responsive{
+      
+      background-image:url(./images/image-product-desktop.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height:350px;
+      width: 290px;
+      border-radius:5px;
+      
+    }
+
+    .item {
+      display: flex;
+    }
+
+    .item-2 {
+      background-color: white;
+      height:22em;
+      width:16em;
+      border-radius: 4px;
+    }
+
+    .para {
+      color: #80808098;
+      font-family: 'Times New Roman';
+      margin-left:10px;
+    }
+
+    .price {
+      font-size: xx-large;
+      color: rgba(5, 82, 5, 0.719);
+      font-weight: 600;
+      margin-left:10px;
+    }
+
+    .head {
+      font-weight: 600;
+      font-family: 'Times New Roman';
+      margin-left:10px;
+    }
+
+    .strike {
+      font-size: small;
+      margin-left: 1em;
+    }
+
+    .category {
+      color: #80808098;
+      font-family: 'Times New Roman';
+      margin-left:10px;
+    }
+
+    .btn {
+      background-color: rgba(5, 82, 5, 0.719);
+      margin-left:1rem;
+      color: white;
+      font-weight: 800;
+      margin-top: 10px;
+      width:13rem;
+    }
+    footer{
+      margin-top: 30px;
+      border: ridge rgba(0, 0, 0, 0.63);
+    }
+}
+    /*
+   */
+    /* MOBILE VERSION */
+    @media screen and (max-width: 767px){ 
+    body{
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-responsive{
+      
+      background-image:url(./images/image-product-mobile.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 240px;
+      width: 290px;
+      border-radius:5px;
+      margin-top: 5px;
+    }
+    .item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background-color: #f3eae3;
+      min-height:100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .para {
+      color: #80808098;
+      font-family: 'Times New Roman';
+      margin-left:10px;
+    }
+
+    .price {
+      font-size: xx-large;
+      color: rgba(5, 82, 5, 0.719);
+      font-weight: 600;
+      margin-left:10px;
+    }
+
+    .head {
+      font-weight: 600;
+      font-family: 'Times New Roman';
+      margin-left:10px;
+    }
+
+    .strike {
+      font-size: small;
+      margin-left: 1em;
+    }
+
+    .category {
+      color: #80808098;
+      font-family: 'Times New Roman';
+      margin-left:10px;
+    }
+
+    .btn {
+      background-color: rgba(5, 82, 5, 0.719);
+      margin-left:2rem;
+      color: white;
+      font-weight: 800;
+      margin-top:8px;
+      width:14rem;
+    }
+    footer{
+      margin-top: 30px;
+      border: ridge rgba(0, 0, 0, 0.63);
+    }
+    .item-2 {
+      background-color: white;
+      height:22em;
+      width:18em;
+      
+    }
+  }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-sm-7">
+      <div class=" item">
+        <div class="img-responsive">
+          
+        </div>
+        <div class=" item-2">
+        <span class="category">PERFUME</span><br>
+          <h3 class="head">Gabrielle Essence Eau De Perfume
+          </h3>
+          <p class="para">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+            Perfumer-Creator for the House of CHANEL.</p><br>
+          <span class="price"> $149.99</span><span class="strike">$169.99</span>
+          <button type="button" class="btn">ADD-TO-CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Preview
+
+  Gabrielle Essence Eau De Parfum
+
+  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+  Perfumer-Creator for the House of CHANEL.
+
+  $149.99
+  $169.99
+
+  Add to Cart
+  -->
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.ucer.tk" target="_blank">Dev Sk</a>.
+    </div>
+  </footer>
+</body>
+
+</html>
